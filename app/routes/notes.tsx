@@ -1,6 +1,8 @@
 import type { LoaderFunctionArgs } from "@remix-run/node";
 import { json } from "@remix-run/node";
 import { useLoaderData, Outlet, Link, NavLink } from "@remix-run/react";
+import { LanguageToggle } from "~/components/shadcn/ui/ui/switch-language";
+import { ThemeToggle } from "~/components/shadcn/ui/ui/switch-theme";
 
 import { LogoutButton, requireAuthSession } from "~/modules/auth";
 import { getNotes } from "~/modules/note";
@@ -28,11 +30,15 @@ export default function NotesPage() {
 					<Link to=".">Notes</Link>
 				</h1>
 				<p>{data.email}</p>
-				<LogoutButton />
+				<div className="flex gap-4">
+					<ThemeToggle />
+					<LanguageToggle />
+					<LogoutButton />
+				</div>
 			</header>
 
-			<main className="flex h-full bg-white">
-				<div className="h-full w-80 border-r bg-gray-50">
+			<main className="flex h-full ">
+				<div className="h-full w-80 border-r ">
 					<Link to="new" className="block p-4 text-xl text-blue-500">
 						+ New Note
 					</Link>

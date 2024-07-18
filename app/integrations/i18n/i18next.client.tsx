@@ -5,6 +5,7 @@ import { I18nextProvider, initReactI18next } from "react-i18next";
 import { getInitialNamespaces } from "remix-i18next";
 
 import { config } from "./config";
+import { i18nCookie } from "./cookie";
 
 export function initI18nextClient(hydrate: IdleRequestCallback) {
 	i18next

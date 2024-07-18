@@ -5,11 +5,13 @@ import { createInstance } from "i18next";
 import Backend from "i18next-fs-backend";
 import { initReactI18next } from "react-i18next";
 import { RemixI18Next } from "remix-i18next";
+import { i18nCookie } from "./cookie";
 
 import { config } from "./config"; // your i18n configuration file
 
 export const i18nextServer = new RemixI18Next({
 	detection: {
+		cookie: i18nCookie,
 		supportedLanguages: config.supportedLngs,
 		fallbackLanguage: config.fallbackLng,
 	},

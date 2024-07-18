@@ -48,6 +48,7 @@ function getEnv(
 export const SERVER_URL = getEnv("SERVER_URL");
 export const SUPABASE_SERVICE_ROLE = getEnv("SUPABASE_SERVICE_ROLE");
 export const SESSION_SECRET = getEnv("SESSION_SECRET");
+export const PRODUCTION_URL = getEnv("PRODUCTION_URL");
 
 /**
  * Shared envs
